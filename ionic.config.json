@@ -1,0 +1,7 @@
+{
+  "name": "romanitory",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
