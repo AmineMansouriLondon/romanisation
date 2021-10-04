@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  <h1 class="title animated flipInX ion-text-center">ROMANISATOR</h1>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="vcs">
+      <ion-card class="animated zoomInDown" color="none">
+        <ion-card-header>NUMBER</ion-card-header>
+        <ion-card-content>
+          <ion-input [ngClass]="{'animated tada': animate == 'num'}" type="number" #num [value]="number"
+            (ionChange)="changeNumber(num.value)"></ion-input>
+        </ion-card-content>
+      </ion-card>
+      <ion-button class="animated zoomIn converter" color="secondary" size="large" (click)="checker()">
+        CONVERT!</ion-button>
+      <ion-card class="animated zoomInUp" color="none">
+        <ion-card-header>ROMAN NUMERAL</ion-card-header>
+        <ion-badge *ngFor="let l of letters">{{l}}</ion-badge>
+        <ion-card-content>
+          <ion-input [ngClass]="{'animated tada': animate == 'rom'}" #rom [value]="roman"
+            (ionChange)="changeRoman(rom.value)"></ion-input>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <div class="character-container">
+    <ion-img class="animated slideInUp character" src="assets/images/character.png"></ion-img>
   </div>
 </ion-content>
