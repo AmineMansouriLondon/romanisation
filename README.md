@@ -1,11 +1,13 @@
 # romanisation
-Simple Roman Numeral conversion app built using Ionic 6.
+Simple Roman Numeral conversion app built using Ionic 6. Convert numbers to Roman Numerals and vice versa.
 
-1. Run:
+1. Download the zip file.
+
+2. Run:
 ```npm install```
 to install node modules.
 
-2. Run:
+3. Run:
 ```ionic serve```.
 
 For unit testing run ```npm test```.
