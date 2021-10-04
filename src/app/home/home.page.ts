@@ -42,13 +42,11 @@ export class HomePage {
 
   checker() {
     if (this.convert_dir == 'rom-num') {
-      let chars = this.roman.toUpperCase().split('');
-      for (let l of chars) {
-        if (!this.letters.includes(l)) {
-          this.presentAlert('You can only use roman numeral letters!');
-        } else {
-          this.convert()
-        }
+      const pattern = /^(M{1,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|C?D|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|X?L|L?X{1,3})(IX|IV|V?I{0,3})|M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|I?V|V?I{1,3}))$/
+      if (pattern.test(this.roman) == false) {
+        this.presentAlert('Your Roman Numeral is not valid!');
+      } else {
+        this.convert();
       }
     } else {
       if (this.number > 3000) {

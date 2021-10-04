@@ -35,7 +35,7 @@ describe('HomePage', () => {
     component.roman = 'VZ';
     component.checker();
     const alert = jasmine.createSpyObj('AlertController', ['create']);
-    expect(alert.create).toHaveBeenCalledWith('You can only use roman numeral letters!')
+    expect(alert.create).toHaveBeenCalledWith('Your Roman Numeral is not valid!')
   }
 
   it('should check for a number over 3999'), () => {
