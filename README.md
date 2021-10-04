@@ -10,4 +10,4 @@ to install node modules.
 
 For unit testing run ```npm test```.
 
-Built using Ionic v6.17.1, Angular 12, Node v14.15.5.
+Built using Ionic v6.17.1, Angular 12, Node v14.15.5, Cordova 10.0.0.
